@@ -8,8 +8,12 @@ def check_even_odd(sum):
         return "Odd"
 
 if __name__ == "__main__":
-    a = int(input("Enter first number:"))
-    b = int(input("Enter second number:"))
-    Sum = calculate_sum(a, b)
-    print("Sum of the two numbers:", Sum)
-    print("The sum is an", check_even_odd(Sum), "number.")
+    try:
+        a = int(input("Enter first number:"))
+        b = int(input("Enter second number:"))
+        Sum = calculate_sum(a, b)
+        print("Sum of the two numbers:", Sum)
+        print("The sum is an", check_even_odd(Sum), "number.")
+    except ValueError:
+        print("Please enter a valid integer.")
+
